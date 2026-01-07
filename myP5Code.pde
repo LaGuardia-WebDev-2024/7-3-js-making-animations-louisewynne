@@ -5,6 +5,7 @@ void setup() {
 
 //🎯Variable Declarations Go Here
 var sunSize = 30; 
+var x = 10
 
 
 //🟢Draw Function - Runs on Repeat
@@ -24,7 +25,18 @@ draw = function(){
   
   //ladybug
   fill(200,0,0);
-  ellipse(10, 350, 10, 10);
+  ellipse(x, 350, 10, 10);
+
+  sunSize = sunSize + 3
+  x = x + 1
+
+  if(sunSize > 750){
+    sunSize = 30;
+  }
+  if(x > 400){
+    x = 10;
+  }
+
 }
 
 
@@ -32,7 +44,7 @@ draw = function(){
 //Proceed with Caution (and Curiosity!)
 
 
-//🟡Mouse Pressed Procedue - Runs When Mouse is Pressed on Canvas
+//Mouse Pressed Procedue - Runs When Mouse is Pressed on Canvas
 void mousePressed(){
 
   
